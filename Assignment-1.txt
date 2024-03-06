@@ -1,0 +1,64 @@
+import React from 'react';
+import Card from './Card';
+import Button from './Button';
+
+const App = () => {
+  const handleClick = () => {
+    console.log('Button clicked!');
+  };
+
+  return (
+    <div className="app">
+      <h1>Sample Application</h1>
+      <Card
+        title="Example Card"
+        description="This is an example card."
+        image="https://via.placeholder.com/150"
+      />
+      <Button text="Click Me" onClick={handleClick} style={{ backgroundColor: 'blue', color: 'white' }} />
+    </div>
+  );
+};
+
+export default App;
+
+
+
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  margin-top: 0;
+}
+
+.card-description {
+  margin-bottom: 0;
+}
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: lightblue;
+}
+
+.button:active {
+  background-color: darkblue;
+}
+
